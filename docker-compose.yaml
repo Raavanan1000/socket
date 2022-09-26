@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  node:
+    image: node:18.0.0-alpine
+    user: node
+    working_dir: /home/node
+    tty: true
+    stdin_open: true
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/home/node
